@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+
+.movies {
+  padding: 30px;
+
+ min-height: 100vh;
+ max-height: 100%;
+  .movies-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .movies_table {
+    max-width: 100%;
+    width: 100%;
+    border: 2px solid $logo-color;
+    border-radius: 0.25em;
+    padding: 2em;
+    thead {
+      td {
+        font-size: 2em;
+        font-weight: bold;
+        color: $alert-darker-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

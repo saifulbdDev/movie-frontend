@@ -1,0 +1,12 @@
+@import '../../styles/colors';
+@import "../../styles/base";
+.default_button {
+    color: $white-color;
+    background-color: $alert-darker-color;
+   @include btn;
+}
+
+.default_button:hover,
+.default_button:focus {
+    background-color: $alert-color;
+}

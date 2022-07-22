@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import 'react-toastify/dist/ReactToastify.css';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import NotFound from './pages/NotFound/NotFound';
+
+import Register from './pages/Register/Register';
+import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import MovieAdd from './pages/AddMovie/AddMovie';
+export default function App() {
+    
+
+    return (
+        <>
+            <Header/>
+            <main className='main'>
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/*" element={<NotFound />} />
+                <Route element={<ProtectedRoutes />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/add-movie" element={<MovieAdd />} />
+                   
+                </Route>
+            </Routes>
+            </main>
+            <Footer/>
+            <ToastContainer />
+        </>
+    );
 }
-
-export default App;

@@ -1,0 +1,53 @@
+@import '../../styles/colors';
+@import '../../styles/base';
+.section_register {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .register_form {
+        @include card
+    }
+    
+    .register_form_title,
+    .register_success-message {
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-top: 1em;
+    }
+    
+    .register_success-message {
+        margin-bottom: 1em;
+    }
+    
+    .register_form_input {
+       @include input
+    }
+    
+    .register_button_wrapper,
+    .register_login,
+    .register_error {
+        margin-bottom: 1em;
+    }
+    
+    .register_error,
+    .register_login,
+    .register_form_title,
+    .register_success-message {
+        color: $alert-color;
+    }
+    
+    .register_login {
+        font-size: 1.15em;
+    }
+    
+    .register_login_span {
+        font-weight: bolder;
+        color: $alert-color;
+    }
+    
+    .register_login_span:hover,
+    .register_login_span:focus {
+        text-decoration: underline;
+    }
+}

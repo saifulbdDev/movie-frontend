@@ -1,0 +1,47 @@
+@import "../../styles/colors";
+@import "../../styles/base";
+.section_login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login_form {
+    @include card;
+  }
+
+  .login_form_title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  .login_form_input {
+    @include input;
+  }
+
+  .login_button_wrapper,
+  .login_register,
+  .login_error {
+    margin-bottom: 1em;
+  }
+
+  .login_error,
+  .login_register,
+  .login_form_title {
+    color: $alert-color;
+  }
+
+  .login_register {
+    font-size: 1.15em;
+  }
+
+  .login_register_span {
+    font-weight: bolder;
+    color: $alert-color;
+  }
+
+  .login_register_span:hover,
+  .login_register_span:focus {
+    text-decoration: underline;
+  }
+}

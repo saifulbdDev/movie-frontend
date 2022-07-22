@@ -1,0 +1,28 @@
+@import "../../styles/colors";
+@import "../../styles/base";
+.content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  .add_form {
+      padding: 20px;
+      padding-bottom: 20px;
+    @include card;
+    .form-control{
+        @include input;
+    }
+  }
+  .content-footer{
+      display: flex;
+      align-items: center;
+     
+    .span {
+        margin-left: 30px;
+      font-weight: bolder;
+      color: $alert-color;
+      font-size: 1.15em;
+    }
+  }
+}
